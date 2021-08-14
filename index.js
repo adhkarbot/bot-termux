@@ -40,19 +40,17 @@ async function start() {
             const { text, image, video, audio } = MessageType
             const content = JSON.stringify(msg.message)
             const isGroup = from.endsWith('@g.us')
-			      const sender = isGroup ? msg.participant : msg.key.remoteJid
+	    const sender = isGroup ? msg.participant : msg.key.remoteJid
             const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
-		      	const groupMembers = isGroup ? groupMetadata.descId : ''  
+	    const groupMembers = isGroup ? groupMetadata.descId : ''  
             const owner = ["966xxxxxxxxx@s.whatsapp.net"] // ضع رقم صاحب البوت مع المفتاح الدولي بدون علامة زائد +
             const isOwner = owner.includes(sender);
             body = (type === 'conversation' && msg.message.conversation) ? msg.message.conversation : (type == 'imageMessage') && msg.message.imageMessage.caption ? msg.message.imageMessage.caption : (type == 'videoMessage') && msg.message.videoMessage.caption ? msg.message.videoMessage.caption : (type == 'extendedTextMessage') && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text : ''
             const comn = body.toLowerCase().split(' ')[0] || ''
             const comnquran = body
             const txt = body.toLowerCase()
-            const gs = body.split(' ');
-            const inm = from.endsWith('@g.us')
-		      	const nameq = inm ? msg.participant : msg.key.remoteJid
-            pushname = client.contacts[nameq] != undefined ? client.contacts[nameq].vname || client.contacts[nameq].notify : undefined
+            const gs = body.split(' ')
+            pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
 
 
 
