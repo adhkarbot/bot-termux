@@ -10,7 +10,6 @@ const photo = require('./lib/photo.js');
 const txtt = require('./lib/txtt.js');
 const videox = require('./lib/video.js');
 const quran = require('./lib/quran.js');
-const tes = JSON.parse(fs.readFileSync('./ll.json'))
 
 async function start() {
 
@@ -54,23 +53,11 @@ async function start() {
 
 
 
-// ========================= خدمات البوت  ==============//
+// ========================= مرحبا  ==============//
             if ((txt === "hi") || (txt === "مرحبا") || (txt === "بوت")){
               await client.sendMessage (from, `${pushname}`+txtt.t3, text);
             }
 
-// =====================//          
-            else if (txt === "data") {
-              
-              
-              let lon = await client.chats.array
-
-                
-                  tes.push(lon)
-                  fs.writeFileSync('./ll.json', JSON.stringify(tes)) 
-                
-              
-            }
 // ========================= رد السلام  ==============//
             else if ((txt === "السلام عليكم") || (txt === "السلام عليكم ورحمة الله") || (txt === "السلام عليكم ورحمة الله وبركاته") || (txt === "سلام عليكم")) {
 
