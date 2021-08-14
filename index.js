@@ -15,14 +15,14 @@ async function start() {
 
     const client = new WAConnection()
     //========================= كود qr ====================//
-    fs.existsSync('./BotAdkhar.json') && client.loadAuthInfo('./BotAdkhar.json') 
+    fs.existsSync('./BotAdhkar.json') && client.loadAuthInfo('./BotAdhkar.json') 
     await client.connect({timeoutMs: 30*1000}) 
-    fs.writeFileSync('./BotAdkhar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+    fs.writeFileSync('./BotAdhkar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
   
     console.log('-----------------------------------------------------------');
-    console.log(figlet.textSync('BOT ADKHAR'));
+    console.log(figlet.textSync('BOT ADHKAR'));
     console.log('-----------------------------------------------------------');
-    console.log("start bot adkhar", moment().format("HH:mm:ss"));   
+    console.log("start bot adhkar", moment().format("HH:mm:ss"));   
     
     //==========================   لاتلعب هنا فقط غير رقم صاحب البوت   ==============//    
 
