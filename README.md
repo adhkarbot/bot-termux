@@ -1,6 +1,6 @@
 #  Bot Adkhar WhatsApp || بوت أذكار للواتساب
-##### A bot that sends adhkar and photos automatically every hour to all your groups
-##### روبوت يرسل الأذكار والصور تلقائيًا كل ساعة لجميع القروبات
+##### A bot that sends adhkar and photos and video automatically every hour to all your groups
+##### روبوت يرسل الأذكار والصور والفيديو تلقائيًا كل ساعة لجميع القروبات
 ##### شكرا
  @adiwajshing/baileys
 
