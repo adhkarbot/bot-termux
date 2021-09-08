@@ -1,5 +1,9 @@
 {
-  "packageRules": {
+  "rangeStrategy": "pin",
+  "ignorePaths": ["examples/**"],
+  "packageRules": [{
+    "packagePatterns": ["^angular.*"],
+    "groupName": "angular",
     "automerge": true
-  }
+  }]
 }
