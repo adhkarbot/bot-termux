@@ -1,5 +1,5 @@
 {
-  "packageRules": [{
+  "packageRules": {
     "automerge": true
-  }]
+  }
 }
